@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Tester</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .info-panel {
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .event-info {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+         /* span */
+        }
+
+
+        .keyboard {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 8px;
+            gap: 4px;
+        }
+
+        .key {
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            min-width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: default;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.1s ease;
+            user-select: none;
+        }
+
+        .key.pressed {
+            background: coral;
+            color: white;
+            transform: translateY(2px);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .key.special {
+            min-width: 50px;
+        }
+
+        .key.space {
+            min-width: 200px;
+        }
+
+        .keycast {
+            height: 40px;
+        }
+
+        #textInput {
+            width: 80%;
+            max-width: 800px;
+            padding: 10px;
+            margin: 20px 0;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .prevented {
+            color: #ff3b30;
+        }
+
+        #keyPressed {
+            /* add simple animation */
+        }
+
+        #keyPressed.hidden {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="info-panel">
+        <div class="event-info">
+            <span id="keyPressed" class="keycast"></span> 
+        </div>      
+    </div>
+
+    <input type="text" id="textInput" placeholder="Type here to test (some special keys are prevented)" />
+
+    <div class="keyboard">
+        <div class="row">
+            <div class="key special" data-key="Tab">Tab</div>
+            <div class="key" data-key="q">Q</div>
+            <div class="key" data-key="w">W</div>
+            <div class="key" data-key="e">E</div>
+            <div class="key" data-key="r">R</div>
+            <div class="key" data-key="t">T</div>
+            <div class="key" data-key="y">Y</div>
+            <div class="key" data-key="u">U</div>
+            <div class="key" data-key="i">I</div>
+            <div class="key" data-key="o">O</div>
+            <div class="key" data-key="p">P</div>
+            <div class="key" data-key="[">[</div>
+            <div class="key" data-key="]">]</div>
+            <div class="key" data-key="\\">\\</div>
+        </div>
+
+        <div class="row">
+            <div class="key special" data-key="CapsLock">Caps</div>
+            <div class="key" data-key="a">A</div>
+            <div class="key" data-key="s">S</div>
+            <div class="key" data-key="d">D</div>
+            <div class="key" data-key="f">F</div>
+            <div class="key" data-key="g">G</div>
+            <div class="key" data-key="h">H</div>
+            <div class="key" data-key="j">J</div>
+            <div class="key" data-key="k">K</div>
+            <div class="key" data-key="l">L</div>
+            <div class="key" data-key=";">;</div>
+            <div class="key" data-key="'">'</div>
+            <div class="key special" data-key="Enter">⏎</div>
+        </div>  
+      </div>  
+
+    <script>
+        // 🐮  1. Get all the key elements
+      
+
+        // 🐮 2.  Create a map for key elements
+  
+        // 🐮 6. Update event information panel
+
+        // 🐮 5. Handle keydown event
+        
+        // 🐮 4. Handle keyup event
+     
+
+        // 🐮 3.  Focus the input field on load
+       
+    </script>
+</body>
+</html>
