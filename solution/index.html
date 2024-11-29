@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keyboard Tester</title>
+    
     <style>
         body {
+            overflow: hidden;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: #f0f0f0;
             display: flex;
@@ -43,6 +45,7 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             width: 80%;
             max-width: 800px;
+            margin-bottom: 40px;
         }
 
         .row {
@@ -108,9 +111,64 @@
         #keyPressed.hidden {
             opacity: 0;
         }
+        .top-bar {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 10px;
+            background-color: #f1f1f1;
+            gap: 8px;
+            
+        }
+        .top-bar a {
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .top-bar img {
+            border-radius: 50%;
+        }
+        .top-bar a:hover {
+            text-decoration: underline;
+        }
+        .title {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        footer p {
+            font-size: 0.8rem;
+            margin: 0;
+        }
+        footer a {
+            text-decoration: none;
+            color: #333;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
+    <div class="top-bar">
+        <h1 class="title">Keycraft</h1>
+        <a href="https://github.com/azhariemuhammad/keycraft" target="_blank">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="30" height="30">
+        </a>
+    </div>  
     <div class="info-panel">
         <div class="event-info">
             <span id="keyPressed" class="keycast"></span> 
@@ -212,6 +270,10 @@
         </div>
         </div>  
 
+
+        <footer>
+            <p>Made with ❤️ by <a href="https://x.com/azharieazharou" target="_blank">azharie muhammad</a></p>
+        </footer>
     <script>
         const keyElements = document.querySelectorAll('.key');
         const keyPressed = document.getElementById('keyPressed');
